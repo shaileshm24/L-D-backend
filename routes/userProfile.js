@@ -1,7 +1,7 @@
 import express from 'express';
-import {upload,uploadProfileImage,deleteProfilePhotoFromDB} from '../uploadProfilePhoto/uploadProfileImg';
-import {viewPersonalProfile} from '../personalInfo/viewPersonalInfo';
-import {editPersonalInfo} from '../personalInfo/editPersonalInfo';
+import {upload,uploadProfileImage,deleteProfilePhotoFromDB} from '../models/uploadProfilePhoto/uploadProfileImg';
+import {viewPersonalProfile} from '../models/personalInfo/viewPersonalInfo';
+import {editPersonalInfo} from '../models/personalInfo/editPersonalInfo';
 import {validateToken} from '../middleware/tokenVerify'
 const router = express.Router();
 

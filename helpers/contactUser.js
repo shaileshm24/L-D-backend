@@ -2,7 +2,7 @@ import mail from './sendMail';
 import { user } from '../module/userSignup';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { userSignup } from '../Authenticate/signup';
+import { userSignup } from '../models/Authenticate/signup';
 import unirest from "unirest";
 
 const req = unirest("GET", "https://www.fast2sms.com/dev/bulk");

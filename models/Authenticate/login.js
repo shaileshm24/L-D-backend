@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
-import { user } from "../module/userSignup";
+import { user } from "../../module/userSignup";
 import bcrypt from "bcrypt";
-import { LoginInfo } from "../module/loginInfo";
+import { LoginInfo } from "../../module/loginInfo";
 import moment from 'moment';
 
 export const login = async (req, res) => {
@@ -11,7 +11,7 @@ export const login = async (req, res) => {
      console.log("email", data);
     let token;
     const userData = await user.findOne({ email: data.email });
-    // console.log("User data available", userData);
+    console.log("User data available", userData);
     if (userData) {
       flag = false;
       const hash = userData.password;
@@ -33,7 +33,7 @@ export const login = async (req, res) => {
             }
 
 			let storeLoginInfo = await LoginInfo.findOne({email:userData.email});
-			const payload = {email:userData.email, dateOfLogin: (moment().format()).add(1,day), device: data.device}
+			const payload = {email:userData.email, dateOfLogin: (moment().format()), device: data.device}
 			console.log(payload);
 			if(storeLoginInfo){
 				storeLoginInfo = await LoginInfo.findOneAndUpdate({email:userData.email}, payload)

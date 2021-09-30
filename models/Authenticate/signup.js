@@ -1,8 +1,8 @@
 // import { jwt } from "jsonwebtoken";
-import { user } from '../module/userSignup';
+import { user } from '../../module/userSignup';
 // import {profilePhoto} from '../module/profilePhotos'
 import bcrypt from 'bcrypt';
-import {sendActivationMail,sendSMS} from '../helpers/contactUser';
+import {sendActivationMail,sendSMS} from '../../helpers/contactUser';
 import moment from 'moment';
 
 function getAge(birth) {

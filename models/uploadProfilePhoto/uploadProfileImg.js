@@ -1,6 +1,6 @@
 import AWS, { RedshiftData } from 'aws-sdk';
 import multer from 'multer';
-import { profilePhoto } from '../module/profilePhotos';
+import { profilePhoto } from '../../module/profilePhotos';
 
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_KEY_ID,

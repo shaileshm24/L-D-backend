@@ -1,5 +1,5 @@
-import {user} from '../module/userSignup';
-import {profilePhoto, profilephoto} from '../module/profilePhotos';
+import {user} from '../../module/userSignup';
+import {profilePhoto, profilephoto} from '../../module/profilePhotos';
 import { userSignup } from '../Authenticate/signup';
 import  mongoose  from "mongoose";
 

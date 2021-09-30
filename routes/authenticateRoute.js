@@ -1,6 +1,6 @@
-import { userSignup } from '../Authenticate/signup';
+import { userSignup } from '../models/Authenticate/signup';
 import { authenticateUserAccount } from '../helpers/contactUser';
-import { login } from '../Authenticate/login'
+import { login } from '../models/Authenticate/login'
 import express from 'express';
 
 const router = express.Router();
